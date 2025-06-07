@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bm8wrdg4qdqlk"]
+
+[ext_resource type="Texture2D" uid="uid://by4m6ufkf22t8" path="res://assets/AlienShip.png" id="1_4a83h"]
+[ext_resource type="Script" uid="uid://bt48jtek2kn7" path="res://scenes/enemy/enemy.gd" id="1_a3pup"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a3pup"]
+size = Vector2(16, 13)
+
+[node name="Enemy" type="Area2D"]
+z_index = -1
+disable_mode = 2
+script = ExtResource("1_a3pup")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_4a83h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_a3pup")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

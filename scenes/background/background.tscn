@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6cjpknqmylil"]
+
+[ext_resource type="Texture2D" uid="uid://cbdilt15ebl8y" path="res://assets/Stars.png" id="1_iheb5"]
+[ext_resource type="Shader" uid="uid://ba7etsguxv4my" path="res://scenes/background/background.gdshader" id="1_pesyb"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rsf5d"]
+shader = ExtResource("1_pesyb")
+shader_parameter/speed = 1.0
+
+[node name="Background" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Stars" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_rsf5d")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_iheb5")
+stretch_mode = 1
