@@ -13,7 +13,7 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	# move down the screen
-	position.y += 20 * delta
+	position.y += GameManager.enemy_fall_speed * delta
 	
 	# allow collision when visible on screen
 	if position.y >= -5:
@@ -22,7 +22,9 @@ func _physics_process(delta: float) -> void:
 	# when position is below the screen remove enemy
 	if position.y >= 135:
 		queue_free()
-	
+		touched_player.emit()
+
+
 # if the area that enters the enemy is the laser
 # then remove enemy
 func _on_area_entered(area: Area2D) -> void:

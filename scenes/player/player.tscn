@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bfdq7aefi4oa6"]
+[gd_scene load_steps=5 format=3 uid="uid://bfdq7aefi4oa6"]
 
 [ext_resource type="Texture2D" uid="uid://cbt4cl250ax6g" path="res://assets/Spaceship.png" id="1_8afob"]
 [ext_resource type="Script" uid="uid://byh6vjcfog565" path="res://scenes/player/player.gd" id="1_dovo2"]
+[ext_resource type="AudioStream" uid="uid://dbsogfs2lox3r" path="res://assets/laserShoot.wav" id="3_gmlin"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8afob"]
 radius = 8.0
@@ -22,3 +23,7 @@ position = Vector2(0, -8)
 [node name="FireRateTimer" type="Timer" parent="."]
 wait_time = 0.3
 one_shot = true
+
+[node name="LaserFireSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_gmlin")
+volume_db = -10.0

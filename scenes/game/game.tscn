@@ -1,9 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://dratgov0c8j0s"]
+[gd_scene load_steps=9 format=3 uid="uid://dratgov0c8j0s"]
 
 [ext_resource type="Script" uid="uid://d2tiefsna6hve" path="res://scenes/game/game.gd" id="1_0sr1o"]
 [ext_resource type="PackedScene" uid="uid://px4bx124kx52" path="res://scenes/background/background_sprite.tscn" id="1_7h61r"]
 [ext_resource type="PackedScene" uid="uid://bfdq7aefi4oa6" path="res://scenes/player/player.tscn" id="1_sul5r"]
 [ext_resource type="PackedScene" uid="uid://bfctobktxdei1" path="res://scenes/game_ui/game_ui.tscn" id="2_kelw5"]
+[ext_resource type="AudioStream" uid="uid://jnco7gp4646v" path="res://assets/hitHurt.wav" id="5_lfrn8"]
+[ext_resource type="AudioStream" uid="uid://djikn7gk4xtys" path="res://assets/explosionAlt.wav" id="6_5i0tg"]
+[ext_resource type="AudioStream" uid="uid://dk1elcmknjwo0" path="res://assets/bgMusic3.wav" id="7_bdhmt"]
+[ext_resource type="AudioStream" uid="uid://ofkmstolirwd" path="res://assets/deathSound.wav" id="8_87uf6"]
 
 [node name="Game" type="Node2D" groups=["game"]]
 script = ExtResource("1_0sr1o")
@@ -24,6 +28,21 @@ position = Vector2(66, 119)
 autostart = true
 
 [node name="Lasers" type="Node2D" parent="."]
+
+[node name="EnemyDestroyedSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_lfrn8")
+volume_db = -10.0
+
+[node name="LostLifeSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_5i0tg")
+volume_db = -10.0
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_bdhmt")
+autoplay = true
+
+[node name="GameOverSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_87uf6")
 
 [connection signal="fired_laser" from="Player" to="." method="_on_player_fired_laser"]
 [connection signal="timeout" from="EnemySpawnTimer" to="." method="_on_enemy_spawn_timer_timeout"]

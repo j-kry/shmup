@@ -71,10 +71,3 @@ layout_mode = 2
 texture = ExtResource("2_1i64n")
 expand_mode = 2
 stretch_mode = 3
-
-[node name="Lives1" type="TextureRect" parent="MarginContainer/LivesVBoxContainer"]
-custom_minimum_size = Vector2(12, 12)
-layout_mode = 2
-texture = ExtResource("2_1i64n")
-expand_mode = 2
-stretch_mode = 3
