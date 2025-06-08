@@ -1,6 +1,16 @@
 # godot-shmup
 
-This is my first "complete" godot game. All assets are created by myself using Asesprite with the exception of the PixelOperator8 font used for the score and game over text.
+This is my first "complete" Godot game.
+All assets are created by myself  - with the exception of the PixelOperator8 font that is used for the score and game over text.
+
+Graphics - Asepsrite
+
+Sounds - https://sfxr.me/​
+
+Music - https://musiclab.chromeexperiments.com/Song-Maker​
+
+
+Source code: https://github.com/j-kry/shmup
 
 ## Screenshots
 <div>
