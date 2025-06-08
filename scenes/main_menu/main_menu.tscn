@@ -1,10 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://btuk8jxwe2mc0"]
+[gd_scene load_steps=7 format=3 uid="uid://btuk8jxwe2mc0"]
 
 [ext_resource type="Texture2D" uid="uid://cyq3b245nru1t" path="res://assets/ShmupTitle.png" id="1_ob46e"]
 [ext_resource type="PackedScene" uid="uid://c6cjpknqmylil" path="res://scenes/background/background.tscn" id="1_uqeha"]
 [ext_resource type="Script" uid="uid://ccnytlbkh3aro" path="res://scenes/main_menu/main_menu.gd" id="1_wem23"]
 [ext_resource type="Texture2D" uid="uid://gfcbbg3g685j" path="res://assets/StartButton.png" id="2_uqeha"]
-[ext_resource type="Texture2D" uid="uid://dym42eswrc360" path="res://assets/QuitButton.png" id="3_wem23"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wem23"]
 texture = ExtResource("2_uqeha")
@@ -12,13 +11,6 @@ modulate_color = Color(0.393086, 0.393086, 0.393085, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3ovsr"]
 texture = ExtResource("2_uqeha")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uqeha"]
-texture = ExtResource("3_wem23")
-modulate_color = Color(0.393086, 0.393086, 0.393085, 1)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5seab"]
-texture = ExtResource("3_wem23")
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -60,25 +52,9 @@ size_flags_vertical = 8
 [node name="StartButton" type="Button" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(64, 32)
 layout_mode = 2
-focus_neighbor_bottom = NodePath("../QuitButton")
-focus_next = NodePath("../QuitButton")
-focus_previous = NodePath("../QuitButton")
 theme_override_styles/focus = SubResource("StyleBoxTexture_wem23")
 theme_override_styles/hover = SubResource("StyleBoxTexture_wem23")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_wem23")
 theme_override_styles/normal = SubResource("StyleBoxTexture_3ovsr")
 
-[node name="QuitButton" type="Button" parent="MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(64, 32)
-layout_mode = 2
-size_flags_vertical = 8
-focus_neighbor_top = NodePath("../StartButton")
-focus_next = NodePath("../StartButton")
-focus_previous = NodePath("../StartButton")
-theme_override_styles/focus = SubResource("StyleBoxTexture_uqeha")
-theme_override_styles/hover = SubResource("StyleBoxTexture_uqeha")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_uqeha")
-theme_override_styles/normal = SubResource("StyleBoxTexture_5seab")
-
 [connection signal="pressed" from="MarginContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
