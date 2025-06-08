@@ -13,7 +13,7 @@ config_version=5
 config/name="Shmup"
 run/main_scene="uid://btuk8jxwe2mc0"
 config/features=PackedStringArray("4.4", "Mobile")
-config/icon="res://icon.svg"
+config/icon="uid://by4m6ufkf22t8"
 
 [autoload]
 
