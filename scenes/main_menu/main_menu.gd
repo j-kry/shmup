@@ -1,8 +1,9 @@
 extends Control
 
-
-func _ready() -> void:
-	$MarginContainer/VBoxContainer/StartButton.grab_focus()
+func _unhandled_input(event: InputEvent) -> void:
+	if event is InputEventKey:
+		if event.pressed:
+			$MarginContainer/VBoxContainer/StartButton.grab_focus()
 
 
 func _on_start_button_pressed() -> void:
