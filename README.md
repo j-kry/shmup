@@ -9,10 +9,8 @@ Sounds - https://sfxr.me/​
 
 Music - https://musiclab.chromeexperiments.com/Song-Maker​
 
+# [Play the game on itch.io](https://jkrysinski.itch.io/shmup)
 
-Source code: https://github.com/j-kry/shmup
-
-## Screenshots
 <div>
   <img src="https://github.com/j-kry/shmup/blob/main/menu.png?raw=true" width="256" />
   <p></p>
