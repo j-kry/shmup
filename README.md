@@ -3,7 +3,7 @@
 This is my first complete Godot game.
 All assets are created by myself  - with the exception of the PixelOperator8 font that is used for the score and game over text.
 
-Graphics - Asepsrite
+Graphics - Aseprite
 
 Sounds - https://sfxr.me/​
 
